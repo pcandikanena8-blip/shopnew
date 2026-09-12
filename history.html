@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riwayat Pesanan — Gamepass Station</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">▮▮</span>
+      <span class="brand-name">Gamepass Station</span>
+    </div>
+    <a href="index.html" class="history-link">← Kembali ke Toko</a>
+  </div>
+  <div class="header-tagline">
+    <h1>Riwayat Pesanan</h1>
+    <p>Masukkan username Roblox yang kamu pakai saat checkout untuk melihat status pesananmu.</p>
+  </div>
+</header>
+
+<main class="catalog history-page">
+
+  <div id="loginCard" class="login-card hidden">
+    <label for="loginUsername">Username Roblox</label>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username kamu di Roblox" required>
+      <button type="submit" class="primary-btn full">Lihat Riwayat</button>
+    </form>
+    <p class="muted small-note">Catatan: ini bukan login dengan kata sandi — riwayat ditampilkan berdasarkan username yang kamu masukkan.</p>
+  </div>
+
+  <div id="historyView" class="hidden">
+    <div class="history-head">
+      <div>Riwayat untuk: <b id="historyUsername"></b></div>
+      <div class="history-actions">
+        <button id="refreshBtn" class="icon-btn" type="button">🔄 Muat ulang</button>
+        <button id="logoutBtn" class="icon-btn" type="button">Ganti akun</button>
+      </div>
+    </div>
+    <div id="historyList" class="history-list"></div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Status pesanan diperbarui otomatis oleh admin setelah pembayaran diverifikasi.</p>
+</footer>
+
+<script src="history.js"></script>
+</body>
+</html>
